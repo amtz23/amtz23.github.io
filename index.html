@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="diseño.css">
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Ocultar información de proyectos por defecto */
+    .info {
+      display: none;
+      margin-top: 10px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h3 {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Oscar Andrés Núñez Martínez</h1>
+    <p class="descripcion">Ingeniero en Desarrollo y Gestión de Software </p>
+    <p>Soy Ingeniero en Software, con interés en especializarme en el área de redes y soporte técnico. Me enfoco en adquirir y fortalecer competencias que me permitan contribuir al diseño, mantenimiento y optimización de infraestructuras tecnológicas. 
+        Mi objetivo profesional es desarrollarme en entornos corporativos donde pueda aplicar mis conocimientos, mantenerme en constante actualización y aportar soluciones efectivas que impulsen la continuidad y eficiencia de los procesos tecnológicos.</p> 
+  </header>
+
+  <main>
+    <section>
+      <h2>Proyectos</h2>
+
+      <article>
+        <h3 onclick="toggleInfo('proyecto1')">Proyecto 1 (Agosto 2025 - Actualmente)</h3>
+        <div id="proyecto1" class="info">
+          <p><strong>Descripción:</strong> Desarrollo de una aplicación web para gestión de inventarios.</p>
+          <p><strong>Herramientas:</strong> HTML, CSS, JavaScript, MySQL.</p>
+        </div>
+      </article>
+
+      <article>
+        <h3 onclick="toggleInfo('proyecto2')">Proyecto 2 (Septiembre 2024 - Enero 2025)</h3>
+        <div id="proyecto2" class="info">
+          <p><strong>Descripción:</strong> Sistema de reservas en línea para un restaurante.</p>
+          <p><strong>Herramientas:</strong> React, Node.js, Express, MongoDB.</p>
+        </div>
+      </article>
+
+      <article>
+        <h3 onclick="toggleInfo('proyecto3')">Proyecto 3 (Enero 2024 - Junio 2024)</h3>
+        <div id="proyecto3" class="info">
+          <p><strong>Descripción:</strong> Aplicación móvil para registro de actividad física.</p>
+          <p><strong>Herramientas:</strong> Flutter, Firebase.</p>
+        </div>
+      </article>
+
+      <article>
+        <h3 onclick="toggleInfo('proyecto4')">Proyecto 4 (Septiembre 2023 - Noviembre 2023)</h3>
+        <div id="proyecto4" class="info">
+          <p><strong>Descripción:</strong> Plataforma educativa para cursos en línea.</p>
+          <p><strong>Herramientas:</strong> Angular, Node.js, PostgreSQL.</p>
+        </div>
+      </article>
+
+      <article>
+        <h3 onclick="toggleInfo('proyecto5')">Proyecto 5 (Septiembre 2022 - Febrero 2023)</h3>
+        <div id="proyecto5" class="info">
+          <p><strong>Descripción:</strong> Dashboard de análisis de datos financieros.</p>
+          <p><strong>Herramientas:</strong> Python (Django), Pandas, Chart.js.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Andrés Martínez</p>
+
+    <!-- Íconos de redes -->
+    <div class="social-icons">
+      <a href="https://github.com/amtz23" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/oscar-núñez-60111b32a" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleInfo(id) {
+      const info = document.getElementById(id);
+      if (info.style.display === "block") {
+        info.style.display = "none";
+      } else {
+        info.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
